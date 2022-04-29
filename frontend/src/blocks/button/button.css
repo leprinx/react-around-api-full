@@ -1,0 +1,21 @@
+.button {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 40px;
+    height: 40px;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+@media screen and (max-width:550px) {
+    .button {
+        order: 1;
+        right: 0;
+        width: 26px;
+        height: 26px;
+    }
+}

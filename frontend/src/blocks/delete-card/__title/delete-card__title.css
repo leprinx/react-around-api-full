@@ -1,0 +1,14 @@
+.delete-card__title {
+    font-weight: 900;
+    padding: 0;
+    margin: 0 0 54px 0;
+    font-size: 24px;
+    line-height: 1.21;
+}
+
+@media screen and (max-width: 550px) {
+    .delete-card__title {
+        font-size: 18px;
+        margin-bottom: 76px;
+    }
+}

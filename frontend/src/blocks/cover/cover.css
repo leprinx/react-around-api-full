@@ -1,0 +1,33 @@
+@import url("__box/cover__box.css");
+@import url("__box/_type/cover__box_type_preview.css");
+@import url("__box/_type/cover__box_type_infoo-tool-tip.css");
+@import url("__preview-image/cover__preview-image.css");
+@import url("__preview-image-subtitle/cover__preview-image-subtitle.css");
+@import url("__tool-tip/cover__info-tool-tip.css");
+
+.cover {
+    visibility: hidden;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+@media screen and (max-width: 550px) {
+    .cover {
+        flex-direction: column;
+        align-items: flex-end;
+        align-items: center;
+    }
+}

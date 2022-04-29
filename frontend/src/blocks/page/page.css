@@ -1,0 +1,13 @@
+
+.page {
+    background-color: #000000;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    color: white;
+}

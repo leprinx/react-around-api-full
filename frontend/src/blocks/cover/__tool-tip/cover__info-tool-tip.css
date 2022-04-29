@@ -1,0 +1,6 @@
+@import url("_image/cover__info-tool-tip_image.css");
+@import url("_message/cover__info-tool-tip_message.css");
+
+.cover_info-tool-tip{ 
+    align-items: center; 
+}

@@ -1,0 +1,36 @@
+.profile__modifier {
+    width: 8px;
+    height: 8px;
+    padding: 7px;
+    margin-left: 18px;
+    margin-bottom: 0px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.profile__modifier:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 900px) {
+    .profile__modifier {
+        margin-bottom: 2px;
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media screen and (max-width: 632px) {
+    .profile__modifier {
+        margin-bottom: 6px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .profile__modifier {
+        padding: 4px;
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+}

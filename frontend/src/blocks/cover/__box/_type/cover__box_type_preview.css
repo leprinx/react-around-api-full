@@ -1,0 +1,9 @@
+.cover__box_type_preview {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    max-width: 75vw;
+    max-height: calc(75vh + 24px);
+    min-width: max-content;
+}

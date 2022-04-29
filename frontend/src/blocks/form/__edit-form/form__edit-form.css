@@ -1,0 +1,20 @@
+.form__edit-form {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.21;
+    margin-bottom: 29.75px;
+    padding-bottom: 13.25px;
+}
+
+.form__edit-form:nth-child(2) {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 550px) {
+    .form__edit-form:nth-child(2) {
+        padding-bottom: 9px;
+        margin-bottom: 30px;
+    }
+}

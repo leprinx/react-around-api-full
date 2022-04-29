@@ -1,0 +1,10 @@
+@import url("__save-button/form__save-button.css");
+@import url("__save-button/form__save-button.css");
+@import url("__edit-form/form__edit-form.css");
+@import url("__input-error/_active/form__input-error_active.css");
+@import url("__input-error/form__input-error.css");
+@import url("__save-button/__disabled/form__save-button_disabled.css");
+.form {
+    display: flex;
+    flex-direction: column;
+}

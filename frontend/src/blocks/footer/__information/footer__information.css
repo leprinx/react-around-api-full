@@ -1,0 +1,14 @@
+.footer__information {
+    color: rgba(84, 84, 84, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.21;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .footer__information {
+        font-size: 14px;
+    }
+}

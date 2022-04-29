@@ -1,0 +1,10 @@
+.places__element-remove {
+    position: absolute;
+    width: 18px;
+    right: 15px;
+    top: 18px;
+}
+
+.places__element-remove:hover {
+    cursor: pointer;
+}

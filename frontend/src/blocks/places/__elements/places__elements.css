@@ -1,0 +1,27 @@
+.places__elements {
+    list-style: none;
+    display: grid;
+    grid-gap: 17px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .places__elements {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .places__elements {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
+    }
+}

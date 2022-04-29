@@ -1,0 +1,12 @@
+.profile__description {
+    padding-left: 30px;
+    box-sizing: border-box;
+    max-width: calc(100% - 120px);
+}
+
+@media screen and (max-width: 632px) {
+    .profile__description {
+        padding: 0;
+        max-width: 100%;
+    }
+}
