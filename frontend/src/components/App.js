@@ -87,6 +87,7 @@ function App() {
         .then((res) => {
           if (res) {
             setIsLoggedIn(true);
+            setCurrentUser(res.myUser);
             navigate('/');
           } else {
             localStorage.removeItem('jwt');
