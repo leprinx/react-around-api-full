@@ -68,9 +68,9 @@ function App() {
       .login(user, password)
       .then((res) => {
         if (res) {
+          setCurrentUser(res.data);
           setJWT(res.token);
           localStorage.setItem('jwt', res.token);
-          console.log(res);
           handleLogin();
           navigate('/');
         }
@@ -105,14 +105,6 @@ function App() {
         .getCards(isJWT)
         .then((res) => {
           setCurrentCards(res.reverse());
-        })
-        .catch((err) => {
-          console.log(`Error: ${err}`);
-        });
-      api
-        .getUserData(jwt)
-        .then((res) => {
-          setCurrentUser(res);
         })
         .catch((err) => {
           console.log(`Error: ${err}`);
