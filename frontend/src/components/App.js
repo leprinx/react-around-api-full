@@ -68,7 +68,6 @@ function App() {
       .login(user, password)
       .then((res) => {
         if (res) {
-          setCurrentUser(res.data);
           setJWT(res.token);
           localStorage.setItem('jwt', res.token);
           console.log(res);
@@ -88,7 +87,6 @@ function App() {
         .then((res) => {
           if (res) {
             setIsLoggedIn(true);
-            //setCurrentUser(res.myUser);
             navigate('/');
           } else {
             localStorage.removeItem('jwt');
@@ -114,7 +112,7 @@ function App() {
       api
         .getUserData(jwt)
         .then((res) => {
-          setCurrentUser(res)
+          setCurrentUser(res);
         })
         .catch((err) => {
           console.log(`Error: ${err}`);
