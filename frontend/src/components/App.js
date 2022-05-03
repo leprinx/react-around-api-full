@@ -73,6 +73,7 @@ function App() {
           localStorage.setItem('jwt', res.token);
           handleLogin();
           navigate('/');
+          console.log(res);
         }
       })
       .catch((err) => {

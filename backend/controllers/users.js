@@ -95,7 +95,9 @@ const login = (req, res, next) => {
           expiresIn: '7d',
         },
       );
-      res.send({ data: user, token });
+      const logedUser = user;
+      delete logedUser.password;
+      res.send({ data: logedUser, token });
     })
     .catch(() => next(new ErrorHandler('Wrong email or password', 401)));
 };
