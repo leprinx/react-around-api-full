@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Users = require('../models/userSchema');
-const { BAD_REQUEST, NOT_FOUND, SUCCES } = require('../utils/errorHandlers');
+const { BAD_REQUEST, NOT_FOUND, SUCCES, CONFLICT_ERROR } = require('../utils/errorHandlers');
 const ErrorHandler = require('../utils/errorClass');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
@@ -47,7 +47,7 @@ const createUser = (req, res, next) => {
   Users.findOne({ email })
     .then((user) => {
       if (user) {
-        throw new ErrorHandler('User already exists', 403);
+        throw new ErrorHandler('User already exists', CONFLICT_ERROR);
       } else {
         return bcrypt.hash(password, 10);
       }
@@ -60,7 +60,10 @@ const createUser = (req, res, next) => {
         email,
         password: hash,
       })
-        .then((user) => res.status(SUCCES).send({ data: user }))
+        .then((user) => {
+          user.password = undefined;
+          res.status(SUCCES).send({ data: user })
+        })
         .catch((err) => {
           if (err.name === 'ValidationError') {
             return next(
@@ -95,9 +98,8 @@ const login = (req, res, next) => {
           expiresIn: '7d',
         },
       );
-      const logedUser = user;
-      delete logedUser.password;
-      res.send({ data: logedUser, token });
+      user.password = undefined;
+      res.send({ data: user, token });
     })
     .catch(() => next(new ErrorHandler('Wrong email or password', 401)));
 };
